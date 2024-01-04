@@ -1,1 +1,93 @@
-<p>category-list works!</p>
+<nav aria-label="breadcrumb" class="mb-5">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/">Inicio</a>
+        </li>
+
+        <li class="breadcrumb-item active">
+            Categorias
+        </li>
+    </ol>
+</nav>
+
+<div class="row mb-5">
+    <div class="col-md mt-2">
+        <h1 class="h2">
+            <span class="pi pi-angle-right" style="font-size: 1.5rem; color: dimgrey;"></span>
+            Categorias cadastradas
+        </h1>
+    </div>
+
+    <div class="col-md">
+        <a routerLink="new" class="float-end mt-3 btn btn-outline-success">
+            <span class="pi pi-plus" style="font-size: 0.8rem"></span>
+            Adicionar categoria
+        </a>
+    </div>
+</div>
+
+<div class="card" style="width: 100%;">
+    <div class="card-body p-4">
+        <table class="table border table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <i class="pi pi-sort-alpha-down"></i>
+                        Categorias
+                    </th>
+                    <th scope="col">
+                        <i class="pi pi-wrench"></i>
+                        Ações
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Lazer</strong><br>
+                        <small>Cinema, parque, praia e etc ...</small>
+                    </td>
+                    <td>
+                        <a [routerLink]="[12, 'edit']" class="btn btn-dark btn-sm mt-2">
+                            Editar
+                        </a>
+                        <button (click)="('excluir')" class="ms-3 btn btn-danger btn-sm mt-2">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>Saúde</strong><br>
+                        <small>Convênio, remédios, equipamentos e etc ...</small>
+                    </td>
+                    <td>
+                        <a [routerLink]="[12, 'edit']" class="btn btn-dark btn-sm mt-2">
+                            Editar
+                        </a>
+                        <button (click)="('excluir')" class="ms-3 btn btn-danger btn-sm mt-2">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>Despesas</strong><br>
+                        <small>Faturas, boletos, contas e etc ...</small>
+                    </td>
+                    <td>
+                        <a [routerLink]="[12, 'edit']" class="btn btn-dark btn-sm mt-2">
+                            Editar
+                        </a>
+                        <button (click)="('excluir')" class="ms-3 btn btn-danger btn-sm mt-2">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
